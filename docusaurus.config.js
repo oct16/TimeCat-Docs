@@ -2,7 +2,7 @@ module.exports = {
     title: 'TimeCat',
     tagline: 'A Magical Web Recorder & Player',
     url: 'https://oct16.github.io', // Your website URL
-    baseUrl: '/timecat/docs',
+    baseUrl: '/TimeCat-Docs/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
@@ -12,10 +12,10 @@ module.exports = {
     themeConfig: {
         navbar: {
             title: 'TimeCat',
-            // logo: {
-            //     alt: 'My Site Logo',
-            //     src: 'img/logo.svg'
-            // },
+            logo: {
+                alt: 'TimeCat',
+                src: 'img/logo.png'
+            },
             items: [
                 {
                     to: 'docs/',
@@ -35,45 +35,52 @@ module.exports = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
+                    title: 'Introduction',
                     items: [
                         {
-                            label: 'Style Guide',
+                            label: 'Installation',
                             to: 'docs/'
                         },
                         {
-                            label: 'Second Doc',
-                            to: 'docs/doc2/'
+                            label: 'Quick Start',
+                            to: 'docs/quick-start/'
                         }
                     ]
                 },
                 {
-                    title: 'Community',
+                    title: 'Advanced',
                     items: [
                         {
-                            label: 'Stack Overflow',
-                            href: 'https://stackoverflow.com/questions/tagged/docusaurus'
+                            label: 'Recorder Options',
+                            href: '/docs/recorder-options/'
                         },
                         {
-                            label: 'Discord',
-                            href: 'https://discordapp.com/invite/docusaurus'
-                        },
-                        {
-                            label: 'Twitter',
-                            href: 'https://twitter.com/docusaurus'
+                            label: 'Player Options',
+                            href: '/docs/player-options/'
                         }
                     ]
                 },
                 {
-                    title: 'More',
                     items: [
                         {
-                            label: 'Blog',
-                            to: 'blog'
+                            label: 'Demonstrate',
+                            href: '/docs/demo'
                         },
+                        {
+                            label: 'Tutorials Step By Step',
+                            href: '/docs/step-by-step'
+                        }
+                    ]
+                },
+                {
+                    items: [
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/facebook/docusaurus'
+                            href: 'https://github.com/oct16/timecat'
+                        },
+                        {
+                            label: 'Have Bug?',
+                            href: 'https://timecatjs.com/issue-helper'
                         }
                     ]
                 }
