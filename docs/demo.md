@@ -6,7 +6,4 @@ slug: /demo
 ---
 
 
-see https://timecatjs.com
-
-
-<iframe frameBorder="0" style={{ minHeight: '1450px', minWidth: '130%'}} src="https://timecatjs.com" />
+See [TimeCat Demo](https://timecatjs.com)

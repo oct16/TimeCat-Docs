@@ -1,13 +1,13 @@
 module.exports = {
     title: 'TimeCat',
     tagline: 'A Magical Web Recorder & Player',
-    url: 'https://oct16.github.io', // Your website URL
+    url: 'https://oct16.github.io',
     baseUrl: '/TimeCat-Docs/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
-    organizationName: 'oct16', // Usually your GitHub org/user name.
-    projectName: 'TimeCat-Docs', // Usually your repo name.
+    organizationName: 'oct16',
+    projectName: 'TimeCat-Docs',
     themes: [],
     themeConfig: {
         navbar: {
@@ -23,7 +23,8 @@ module.exports = {
                     label: 'Docs',
                     position: 'left'
                 },
-                { to: 'blog', label: 'Blog', position: 'left' },
+                { label: 'Blog', to: 'blog', position: 'left' },
+                { label: 'Demo', position: 'left', href: 'https://timecatjs.com' },
                 {
                     href: 'https://github.com/oct16/timecat',
                     label: 'GitHub',
@@ -94,13 +95,11 @@ module.exports = {
             {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/'
+                    editUrl: 'https://github.com/oct16/TimeCat-Docs/edit/master'
                 },
                 blog: {
                     showReadingTime: true,
-                    // Please change this to your repo.
-                    editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/blog/'
+                    editUrl: 'https://github.com/oct16/TimeCat-Docs/edit/master'
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css')
