@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://oct16.github.io/blog</id>
+    <title>TimeCat Blog</title>
+    <updated>2021-01-01T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://oct16.github.io/blog"/>
+    <subtitle>TimeCat Blog</subtitle>
+    <icon>https://oct16.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Hello TimeCat]]></title>
+        <id>hello-timecat</id>
+        <link href="https://oct16.github.io/blog/hello-timecat"/>
+        <updated>2021-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to this blog.]]></summary>
+    </entry>
+</feed>
