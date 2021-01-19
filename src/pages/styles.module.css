@@ -10,6 +10,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  /* background-color: transparent; */
 }
 
 @media screen and (max-width: 966px) {
@@ -29,14 +30,33 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  margin-top: 50px;
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  height: 80px;
+  width: 80px;
+  margin-bottom: 10px;
 }
 
+.preview {
+    position: relative;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.demo {
+    background-color: black;
+    border-radius: .5%;
+    position: absolute;
+    width: 64%;
+    height: 65%;
+    top: 10%;
+    left: 18%;
+}
 
 .getStarted {
-    color: white!important
+    --ifm-button-border-width: 2px;
 }

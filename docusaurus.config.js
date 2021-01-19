@@ -2,14 +2,18 @@ module.exports = {
     title: 'TimeCat',
     tagline: 'A Magical Web Recorder & Player',
     url: 'https://oct16.github.io',
-    baseUrl: '/TimeCat-Docs/',
+    baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
     organizationName: 'oct16',
     projectName: 'TimeCat-Docs',
+    titleDelimiter: '🐱',
     themes: [],
     themeConfig: {
+        colorMode: {
+            disableSwitch: true
+        },
         navbar: {
             title: 'TimeCat',
             logo: {
@@ -26,8 +30,9 @@ module.exports = {
                 { label: 'Blog', to: 'blog', position: 'left' },
                 { label: 'Demo', position: 'left', href: 'https://timecatjs.com' },
                 {
+                    label: 'Github',
                     href: 'https://github.com/oct16/timecat',
-                    label: 'GitHub',
+                    className: 'header-github-link',
                     position: 'right'
                 }
             ]

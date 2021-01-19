@@ -8,54 +8,29 @@ import styles from './styles.module.css'
 
 const features = [
     {
-        title: 'Easy to Use',
-        imageUrl: 'img/undraw_docusaurus_mountain.svg',
+        title: 'Support ultra-long time lossless video recording',
+        imageUrl: 'img/home/record.png',
         description: (
             <>
-                Docusaurus was designed from the ground up to be easily installed and used to get your website up and
-                running quickly.
+                Support ultra-long browser video recording, high performance, low storage, record all browser
+                interactions
             </>
         )
     },
     {
-        title: 'Focus on What Matters',
-        imageUrl: 'img/undraw_docusaurus_tree.svg',
+        title: 'A "Player" more powerful than Player',
+        imageUrl: 'img/home/player.png',
         description: (
             <>
-                Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your docs into
-                the <code>docs</code> directory.
+                Truly lossless video recording with player support for skipping, fast forwarding, and exporting. Just
+                like the real player
             </>
         )
     },
     {
-        title: 'Powered by React',
-        imageUrl: 'img/undraw_docusaurus_react.svg',
-        description: (
-            <>
-                Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the
-                same header and footer.
-            </>
-        )
-    },
-    {
-        title: 'Powered by React',
-        imageUrl: 'img/undraw_docusaurus_react.svg',
-        description: (
-            <>
-                Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the
-                same header and footer.
-            </>
-        )
-    },
-    {
-        title: 'Powered by React',
-        imageUrl: 'img/undraw_docusaurus_react.svg',
-        description: (
-            <>
-                Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the
-                same header and footer.
-            </>
-        )
+        title: 'Fully open source under the GPL3.0 License',
+        imageUrl: 'img/home/open-source.png',
+        description: <>All core technologies are fully open source, but need to follow the GPL License</>
     }
 ]
 
@@ -79,7 +54,7 @@ function Home() {
     const { siteConfig = {} } = context
     return (
         <Layout title={`${siteConfig.title}`} description="Description will go into a meta tag in <head />">
-            <header className={clsx('hero hero--primary', styles.heroBanner)}>
+            <header className={clsx(styles.heroBanner)}>
                 <div className="container">
                     <h1 className="hero__title">{siteConfig.title}</h1>
                     <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -94,6 +69,15 @@ function Home() {
                 </div>
             </header>
             <main>
+                <section className={styles.preview}>
+                    <img src={useBaseUrl('img/macbook.jpg')} alt="macbook" />
+                    <iframe
+                        allowFullScreen
+                        className={styles.demo}
+                        src="https://www.timecatjs.com/timeCatReplay/antd.html"
+                        frameBorder="0"
+                    ></iframe>
+                </section>
                 {features && features.length > 0 && (
                     <section className={styles.features}>
                         <div className="container">
