@@ -115,6 +115,10 @@ module.exports = {
                     changefreq: 'weekly',
                     priority: 0.5,
                     trailingSlash: false
+                },
+                googleAnalytics: {
+                    trackingID: 'UA-151180797-1',
+                    anonymizeIP: false
                 }
             }
         ]
