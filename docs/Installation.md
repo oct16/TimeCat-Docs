@@ -35,7 +35,7 @@ Add script tags in your browser and use the global variable ``TimeCat``, you can
 
 <ul style={{ listStyle: "decimal"}}>
     <li>
-        <a href="https://www.jsdelivr.com/package/npm/timecatjs"><img align="top" width="100" src={useBaseUrl('img/jsdelivr.png')} /></a>
+        <a href="https://cdn.jsdelivr.net/npm/timecatjs"><img align="top" width="100" src={useBaseUrl('img/jsdelivr.png')} /></a>
     </li>
     <li>
         <a href="https://unpkg.com/timecatjs"><img align="top" width="100" src={useBaseUrl('img/unpkg.png')} /></a> 
@@ -43,6 +43,7 @@ Add script tags in your browser and use the global variable ``TimeCat``, you can
 </ul>
 
 ```js
-<script src="https://www.jsdelivr.com/package/npm/timecatjs"><script>
+<script src="https://cdn.jsdelivr.net/npm/timecatjs"><script>
+<script src="https://unpkg.com/timecatjs"><script>
 ```
 

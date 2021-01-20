@@ -1,6 +1,6 @@
 ---
 id: doc6
-title: Create a New Record
+title: Create a New Recording
 sidebar_label: Step by Step
 slug: /step-by-step
 ---
