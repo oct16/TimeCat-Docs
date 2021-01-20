@@ -6,12 +6,25 @@ slug: /plugin
 ---
 
 ```ts
+import { Watcher } from '@timecat/recorder'
+
+// define error watcher example
+class LogErrorWatcher extends Watcher {
+    init() {
+        window.addEventListener('error', ErrorEvent => {
+            const { message, filename, lineno, colno, error } = ErrorEvent
+            this.emitData('type your define', { message, filename, lineno, colno, error })
+        })
+    }
+}
+
 class ExamplePlugin {
-    
     constructor(options) { /** init plugin options */ }
 
     apply(recorder) {
-        const { plugin, db } = recorder
+        const { plugin, db, addWatcher } = recorder
+
+        addWatcher(LogErrorWatcher)
 
         type HooksType = 'beforeRun' | 'run' | 'emit' | 'end'
         
