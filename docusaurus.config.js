@@ -11,6 +11,7 @@ module.exports = {
     titleDelimiter: '🐱',
     themes: [],
     themeConfig: {
+        sidebarCollapsible: false,
         colorMode: {
             disableSwitch: true
         },
