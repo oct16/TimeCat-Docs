@@ -99,6 +99,7 @@ module.exports = {
             '@docusaurus/preset-classic',
             {
                 docs: {
+                    showLastUpdateAuthor: true,
                     sidebarPath: require.resolve('./sidebars.js'),
                     editUrl: 'https://github.com/oct16/TimeCat-Docs/edit/master'
                 },

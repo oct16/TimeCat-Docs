@@ -19,7 +19,7 @@ import { Recorder } from '@timecat/recorder'
 import { Player } from '@timecat/player'
 ```
 
-### Import from CDN
+### [Import from CDN](/docs/#import-in-browser)
 ```ts
 const { Recorder, Player } = window.TimeCat
 ```
