@@ -29,7 +29,7 @@ module.exports = {
                     position: 'left'
                 },
                 { label: 'Blog', to: 'blog', position: 'left' },
-                { label: 'Demo', position: 'left', href: 'https://timecatjs.com' },
+                { label: 'Examples', position: 'left', href: 'https://timecatjs.com/examples' },
                 {
                     label: 'Github',
                     href: 'https://github.com/oct16/timecat',

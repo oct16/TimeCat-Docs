@@ -75,7 +75,7 @@ function Home() {
                     <iframe
                         allowFullScreen
                         className={styles.demo}
-                        src="https://www.timecatjs.com/timeCatReplay/antd.html"
+                        src="https://www.timecatjs.com/examples/antd"
                         frameBorder="0"
                     ></iframe>
                 </section>
