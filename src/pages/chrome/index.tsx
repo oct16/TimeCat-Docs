@@ -15,8 +15,10 @@ function Home() {
                         <i></i>TimeCat Chrome
                     </div>
                     <div className={styles.desc}>
-                        TimeCat Chrome 是基于 TimeCat 实现的 Chrome
-                        浏览器插件，可以在浏览器中进行视频录制与播放功能，并且支持一键下载导出
+                        TimeCat Chrome is a TimeCat-based plug-in for Chrome that allows video recording and replay in
+                        the browser, and supports one-click download and export.
+                        {/* TimeCat Chrome 是基于 TimeCat 实现的 Chrome
+                        浏览器插件，可以在浏览器中进行视频录制与播放功能，并且支持一键下载导出 */}
                         <br />
                         <a
                             target="_blank"

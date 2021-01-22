@@ -57,7 +57,7 @@ function Home() {
         <Layout title={`${siteConfig.title}`} description="Description will go into a meta tag in <head />">
             <header className={clsx(styles.heroBanner)}>
                 <div className="container">
-                    <h1 className="hero__title">{siteConfig.title}</h1>
+                    <h1 className={clsx(styles.title, 'hero__title')}>{siteConfig.title}</h1>
                     <p className="hero__subtitle">{siteConfig.tagline}</p>
                     <div className={styles.buttons}>
                         <Link
