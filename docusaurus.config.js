@@ -29,7 +29,8 @@ module.exports = {
                     position: 'left'
                 },
                 { label: 'Blog', to: 'blog', position: 'left' },
-                { label: 'Examples', position: 'left', href: 'https://timecatjs.com/examples' },
+                { label: 'Chrome Plugin', to: 'chrome', className: 'header-chrome', position: 'left' },
+                { label: 'Examples', position: 'right', href: 'https://timecatjs.com/examples' },
                 {
                     label: 'Github',
                     href: 'https://github.com/oct16/timecat',
@@ -70,8 +71,8 @@ module.exports = {
                 {
                     items: [
                         {
-                            label: 'Demonstrate',
-                            href: '/docs/demo'
+                            label: 'Examples',
+                            href: 'https://timecatjs.com/examples'
                         },
                         {
                             label: 'Tutorials Step By Step',
@@ -81,6 +82,10 @@ module.exports = {
                 },
                 {
                     items: [
+                        {
+                            label: 'TimeCat Chrome',
+                            href: '/chrome'
+                        },
                         {
                             label: 'GitHub',
                             href: 'https://github.com/oct16/timecat'

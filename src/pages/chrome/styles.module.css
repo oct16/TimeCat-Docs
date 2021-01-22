@@ -1,0 +1,162 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+ .container {
+    border-top: 1px solid transparent;
+    background: #2e1d7d;
+    background: -webkit-radial-gradient(circle, #2e1d7d 0%, #050939 80%);
+    background: radial-gradient(circle, #2e1d7d 0%, #050939 80%);
+    will-change: transform;
+    /* height: calc(100vh - 60px - 206px); */
+}
+
+.centerSection {
+    width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: auto;
+}
+
+.title > i {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url("https://camo.githubusercontent.com/01fa1f6ffedd2023d08e959a3e37d2d6e920516f7194762c47e0c18b828f7de0/68747470733a2f2f7777772e676f6f676c652e636f6d2f6368726f6d652f7374617469632f696d616765732f6368726f6d652d6c6f676f2e737667");
+} 
+
+
+.materialPlayer {
+    border-radius: 20px 20px 0 0;
+    border: 6px solid white;
+    width: 600px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+
+.materialPlayer img {
+    border-radius: 20px 20px 0 0;
+    margin-bottom: -8px;
+}
+
+.title {
+    margin: 80px auto 30px auto;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    max-width: 340px;
+    padding: 5px 0;
+    border: 6px solid white;
+    border-radius: 20px;
+    background-color: #6d8cd1;
+}
+
+.title::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -26px;
+    left: 115px;
+    border-left: 20px solid transparent ;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+}
+
+.title::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -17.6px;
+    left: 115px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #6d8cd1;
+}
+
+.materialPlayer::before{ 
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0px;
+    right:  63px;
+    border-left: 20px solid transparent ;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+}
+
+.materialPlayer::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -8px; 
+    right:  63px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #2e1d7d;
+}
+
+.desc {
+    margin-top: 100px;
+    font-size: 26px;
+    width: 380px;
+    text-align: left;
+    float: right;
+    color: white;
+
+}
+
+.desc > a {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    background: #1a73e8;
+}
+
+
+@media (max-width: 996px) {
+
+    .materialPlayer {
+       display: none;
+    }
+
+    .centerSection {
+        width: 100%;
+    }
+
+    .topSection {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .desc {
+        float: none;
+        margin: 0 auto;
+        font-size: 20px;
+        width: auto;
+        padding: 0 20px;
+        padding-bottom: 60px;
+    }
+
+    .title {
+        max-width: 280px;
+        font-size: 24px;
+    }
+
+    .title::before, .title::after {
+        display: none;
+    }
+}
+  
