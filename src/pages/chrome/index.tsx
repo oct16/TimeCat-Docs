@@ -14,6 +14,9 @@ function Home() {
                     <div className={styles.title}>
                         <i></i>TimeCat Chrome
                     </div>
+                    <div className={styles.materialPlayer}>
+                        <img src={useBaseUrl('img/chrome/player.png')} alt="" />
+                    </div>
                     <div className={styles.desc}>
                         TimeCat Chrome is a TimeCat-based plug-in for Chrome that allows video recording and replay in
                         the browser, and supports one-click download and export.
@@ -26,9 +29,6 @@ function Home() {
                         >
                             Add to Chrome
                         </a>
-                    </div>
-                    <div className={styles.materialPlayer}>
-                        <img src={useBaseUrl('img/chrome/player.png')} alt="" />
                     </div>
                 </section>
             </div>

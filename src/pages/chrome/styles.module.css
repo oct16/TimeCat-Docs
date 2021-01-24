@@ -15,27 +15,17 @@
 }
 
 .centerSection {
-    width: 1080px;
+    max-width: 1080px;
     margin: 0 auto;
     text-align: center;
     overflow: auto;
 }
 
-.title > i {
-    content: "";
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-    margin-right: 10px;
-    background: url("https://camo.githubusercontent.com/01fa1f6ffedd2023d08e959a3e37d2d6e920516f7194762c47e0c18b828f7de0/68747470733a2f2f7777772e676f6f676c652e636f6d2f6368726f6d652f7374617469632f696d616765732f6368726f6d652d6c6f676f2e737667");
-} 
-
-
 .materialPlayer {
     border-radius: 20px 20px 0 0;
     border: 6px solid white;
     width: 600px;
+    float: left;
     position: relative;
     margin-bottom: 100px;
 }
@@ -47,18 +37,29 @@
 }
 
 .title {
-    margin: 80px auto 30px auto;
+    margin: 80px 0 30px 0;
     color: white;
     font-size: 30px;
     font-weight: 500;
-    text-align: center;
+    left: 370px;
     position: relative;
     max-width: 340px;
     padding: 5px 0;
     border: 6px solid white;
     border-radius: 20px;
     background-color: #6d8cd1;
+    line-height: 50px;
 }
+
+.title > i {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url("https://camo.githubusercontent.com/01fa1f6ffedd2023d08e959a3e37d2d6e920516f7194762c47e0c18b828f7de0/68747470733a2f2f7777772e676f6f676c652e636f6d2f6368726f6d652f7374617469632f696d616765732f6368726f6d652d6c6f676f2e737667");
+} 
 
 .title::before{
     content: '';
@@ -101,22 +102,23 @@
     right:  63px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #2e1d7d;
+    border-top: 20px solid #221868;
 }
 
 .desc {
+    margin-left: 650px;
     margin-top: 100px;
-    font-size: 26px;
-    width: 380px;
+    padding: 0 20px;
+    font-size: 24px;
     text-align: left;
-    float: right;
     color: white;
 
 }
 
 .desc > a {
+    width: 140px;
     cursor: pointer;
-    display: inline-block;
+    display: block;
     margin-top: 30px;
     color: white;
     padding: 5px 15px;
@@ -146,13 +148,20 @@
         margin: 0 auto;
         font-size: 20px;
         width: auto;
-        padding: 0 20px;
         padding-bottom: 60px;
     }
 
+    .desc > a {
+        margin: 30px auto 0 auto;
+    }
+
     .title {
+        left: 0;
+        margin: 80px auto 30px auto;
         max-width: 280px;
         font-size: 24px;
+        border: none;
+        background: transparent;
     }
 
     .title::before, .title::after {
