@@ -58,6 +58,17 @@ function Home() {
             <header className={clsx(styles.heroBanner)}>
                 <div className="container">
                     <h1 className={clsx(styles.title, 'hero__title')}>{siteConfig.title}</h1>
+                    <div className={styles.badges}>
+                        <a href="https://www.npmjs.com/package/timecatjs">
+                            <img alt="GitHub Repo version" src="https://img.shields.io/npm/v/timecatjs/latest" />
+                        </a>
+                        <a href="https://github.com/oct16/timecat">
+                            <img
+                                alt="GitHub Repo stars"
+                                src="https://img.shields.io/github/stars/oct16/timecat?style=social"
+                            />
+                        </a>
+                    </div>
                     <p className="hero__subtitle">{siteConfig.tagline}</p>
                     <div className={styles.buttons}>
                         <Link
