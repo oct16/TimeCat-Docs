@@ -29,8 +29,8 @@ module.exports = {
                     position: 'left'
                 },
                 { label: 'Blog', to: 'blog', position: 'left' },
+                { label: 'Demo', position: 'left', to: 'demo' },
                 { label: 'Chrome Plugin', to: 'chrome', className: 'header-chrome', position: 'left' },
-                { label: 'Examples', position: 'right', href: 'https://timecatjs.com/examples' },
                 {
                     label: 'Github',
                     href: 'https://github.com/oct16/timecat',
