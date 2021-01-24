@@ -21,7 +21,7 @@ function Home() {
                         <div className={styles.chromeStoreInfo}>
                             <img
                                 alt="Chrome Web Store"
-                                src="https://img.shields.io/chrome-web-store/v/jgnkkambbdmhfdbdbkljlenddlbplhal"
+                                src="https://img.shields.io/chrome-web-store/v/jgnkkambbdmhfdbdbkljlenddlbplhal?label=TimeCat-Chrome"
                             />
 
                             <img
