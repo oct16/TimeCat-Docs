@@ -71,8 +71,8 @@ module.exports = {
                 {
                     items: [
                         {
-                            label: 'Examples',
-                            href: 'https://timecatjs.com/examples'
+                            label: 'Demo',
+                            href: 'https://timecatjs.com/demo/'
                         },
                         {
                             label: 'Tutorials Step By Step',

@@ -6,4 +6,4 @@ slug: /demo
 ---
 
 
-See [TimeCat Demo](https://timecatjs.com)
+See [TimeCat Demo](https://timecatjs.com/demo/)
