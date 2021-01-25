@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import clsx from 'clsx'
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
@@ -53,6 +53,12 @@ function Feature({ imageUrl, title, description }) {
 function Home() {
     const context = useDocusaurusContext()
     const { siteConfig = {} } = context
+
+    useEffect(() => {
+        const domain = window.location.hostname.split('.').slice(-2).join('.')
+        document.domain = domain
+    })
+
     return (
         <Layout title={`${siteConfig.title}`} description="Description will go into a meta tag in <head />">
             <header className={clsx(styles.heroBanner)}>

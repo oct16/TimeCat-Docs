@@ -17,7 +17,7 @@ function debounce(fn: Function, ms: number) {
 }
 
 function Home() {
-    const [height, setIFrameHeight] = useState('0px')
+    const [height, setIFrameHeight] = useState('1000px')
     const context = useDocusaurusContext()
     const { siteConfig = {} } = context
     const iframeRef = useRef(null)
@@ -28,6 +28,8 @@ function Home() {
         }, 500)
 
         window.addEventListener('resize', debouncedHandleResize)
+        const domain = window.location.hostname.split('.').slice(-2).join('.')
+        document.domain = domain
 
         return () => {
             window.removeEventListener('resize', debouncedHandleResize)
