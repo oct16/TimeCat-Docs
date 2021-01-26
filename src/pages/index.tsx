@@ -9,14 +9,9 @@ import macbookUrl from 'raw-loader!../../static/img/macbook.txt'
 
 const features = [
     {
-        title: 'Support ultra-long time lossless video recording',
+        title: 'Ultra-long time lossless recording',
         imageUrl: 'img/home/record.png',
-        description: (
-            <>
-                Support ultra-long browser video recording, high performance, low storage, record all browser
-                interactions
-            </>
-        )
+        description: <>Ultra-long browser recording, high performance, low storage, all browser interactions tracking</>
     },
     {
         title: 'A "Player" more powerful than Player',
@@ -24,14 +19,14 @@ const features = [
         description: (
             <>
                 Truly lossless video recording with player support for skipping, fast forwarding, and exporting. Just
-                like the real player
+                like a real player
             </>
         )
     },
     {
-        title: 'Fully open source under the GPL3.0 License',
+        title: 'Fully open source based on GPL',
         imageUrl: 'img/home/open-source.png',
-        description: <>All core technologies are fully open source, but need to follow the GPL License</>
+        description: <>All core technologies are fully open source, based on General Public License</>
     }
 ]
 
