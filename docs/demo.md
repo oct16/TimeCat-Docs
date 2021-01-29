@@ -1,7 +1,7 @@
 ---
 id: doc50
-title: Demonstrates
-sidebar_label: Demonstrates
+title: Demo
+sidebar_label: Demo
 slug: /demo
 ---
 

@@ -19,10 +19,18 @@ class LogErrorWatcher extends Watcher {
 }
 
 class ExamplePlugin {
-    constructor(options) { /** init plugin options */ }
+    constructor(options) {
+        /** init plugin options */
+    }
 
     apply(recorder) {
         const { plugin, db, addWatcher } = recorder
+
+        recorder.onData(async (data: RecordData, next: () => Promise<void>) => {
+            // get or set record
+            await next()
+            // get or set record
+        })
 
         addWatcher(LogErrorWatcher)
 
@@ -30,10 +38,9 @@ class ExamplePlugin {
         
         plugin(HooksType, () => void)
         
+        // emitData before save
         plugin('emit', record => {
-            // get record
-            console.log(record)
-            // you can modify record here
+            // get or set record
             record['some property'] = doSomething
         })
 

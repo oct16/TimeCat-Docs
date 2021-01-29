@@ -28,6 +28,7 @@ interface RecordOptions {
     font?: boolean // record font, default is false
     plugins?: RecorderPlugin[] // extend plugins here
     visibleChange?: boolean // stop or resume recorder when visibleChange, default is false
+    visibleChangeKeepTime?: number // default is 5000(ms)
     rewriteResource?: (RewriteItem | PreFetchItem)[]
 }
 
@@ -64,8 +65,14 @@ see [Recorder Plugin](/docs/plugin)
 const recorder = new Recorder()
 
 // receive data on callback
-recorder.onData((data: RecordData) => {
-    // get records
+recorder.onData((data: RecordData, next: () => Promise<void>) => {
+    // get or modify record data
+
+    // here just like koa compose middleware
+    await next() // async call
+
+    // get record data after other methods or plugins 
+    // see: Recorder Plugin
 })
 
 // stop record and clean all watchers

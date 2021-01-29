@@ -33,7 +33,9 @@ player.on(eventType: EventTypes, (...args) => {
     // receive event here
 })
 
-player.destroy() // destroy player
+// destroy player
+player.destroy({ removeDOM: boolean})
+// set removeDOM will remove player ui
 
 ```
 
