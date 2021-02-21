@@ -86,14 +86,15 @@ new Recorder({ plugins: [new ExamplePlugin(options...)] })
 ```ts
 // replay record
 interface ReplayOptions {
-    target: string | HTMLElement // which element has contained the Player, default is Body
+    exportName: string // default to TimeCat
+    target: string | HTMLElement // which element has contained the Player, default to Body
     records: RecordData[] // play with records data
     // receive data in live mode, see examples/mirror
     receiver: ((data: RecordData) => void) => void
     autoplay: boolean // autoplay when data loaded
-    heatPoints: boolean // show heatPoints in progress bar, default is false
-    timeMod: 'recordingTime' | 'durationTime' // default is durationTime
-    fastForward: number[] // present the fast-forward speeds in progress bar, default is [4,16]
+    heatPoints: boolean // show heatPoints in progress bar, default to false
+    timeMod: 'recordingTime' | 'durationTime' // default to durationTime
+    fastForward: number[] // present the fast-forward speeds in progress bar, default to [4,16]
 }
 
 const player = new Player(Partial<ReplayOptions>)

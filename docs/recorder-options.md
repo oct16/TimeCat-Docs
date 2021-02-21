@@ -29,8 +29,11 @@ interface RecordOptions {
     plugins?: RecorderPlugin[] // extend plugins here
     visibleChange?: boolean // stop or resume recorder when visibleChange, default is false
     visibleChangeKeepTime?: number // default is 5000(ms)
-    rewriteResource?: (RewriteItem | PreFetchItem)[]
+    rewriteResource?: (RewriteItem | PreFetchItem)[],
+    disableWatchers?: WatcherTypes
 }
+
+type WatcherTypes = Array<"WindowWatcher" | "CanvasSnapshotWatcher" | "Canvas2DMutationWatcher" | "CanvasWebGLWatcher" | "FontWatcher" | "TerminateWatcher" | "DOMWatcher" | "FormElementWatcher" | "MouseWatcher" | "ScrollWatcher" | "LocationWatcher">
 
 // make 'http://a.com/path' => 'http://b.com/path' for keep resource
 type RewriteItem = {
