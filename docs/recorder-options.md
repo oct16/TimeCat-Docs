@@ -30,10 +30,11 @@ interface RecordOptions {
     visibleChange?: boolean // stop or resume recorder when visibleChange, default is false
     visibleChangeKeepTime?: number // default is 5000(ms)
     rewriteResource?: (RewriteItem | PreFetchItem)[],
-    disableWatchers?: WatcherTypes
+    disableWatchers?: WatcherType[],
+    keepAlive?: number // Recorder will be destroyed and activated according to the user's interaction, default to 0(ms)
 }
 
-type WatcherTypes = Array<"WindowWatcher" | "CanvasSnapshotWatcher" | "Canvas2DMutationWatcher" | "CanvasWebGLWatcher" | "FontWatcher" | "TerminateWatcher" | "DOMWatcher" | "FormElementWatcher" | "MouseWatcher" | "ScrollWatcher" | "LocationWatcher">
+type WatcherType = "WindowWatcher" | "CanvasSnapshotWatcher" | "Canvas2DMutationWatcher" | "CanvasWebGLWatcher" | "FontWatcher" | "TerminateWatcher" | "DOMWatcher" | "FormElementWatcher" | "MouseWatcher" | "ScrollWatcher" | "LocationWatcher"
 
 // make 'http://a.com/path' => 'http://b.com/path' for keep resource
 type RewriteItem = {
