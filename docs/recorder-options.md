@@ -27,11 +27,8 @@ interface RecordOptions {
     audio?: boolean // if your want record audio, default is false
     font?: boolean // record font, default is false
     plugins?: RecorderPlugin[] // extend plugins here
-    visibleChange?: boolean // stop or resume recorder when visibleChange, default is false
-    visibleChangeKeepTime?: number // default is 5000(ms)
     rewriteResource?: (RewriteItem | PreFetchItem)[],
     disableWatchers?: WatcherType[],
-    keepAlive?: number // Recorder will be destroyed and activated according to the user's interaction, default to 0(ms)
 }
 
 type WatcherType = "WindowWatcher" | "CanvasSnapshotWatcher" | "Canvas2DMutationWatcher" | "CanvasWebGLWatcher" | "FontWatcher" | "TerminateWatcher" | "DOMWatcher" | "FormElementWatcher" | "MouseWatcher" | "ScrollWatcher" | "LocationWatcher"
