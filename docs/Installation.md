@@ -43,7 +43,7 @@ Add script tags in your browser and use the global variable ``TimeCat``, you can
 </ul>
 
 ```js
-<script src="https://cdn.jsdelivr.net/npm/timecatjs"><script>
-<script src="https://unpkg.com/timecatjs"><script>
+<script src="https://cdn.jsdelivr.net/npm/timecatjs"></script>
+<script src="https://unpkg.com/timecatjs"></script>
 ```
 
