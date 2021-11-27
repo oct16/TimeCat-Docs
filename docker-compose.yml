@@ -1,0 +1,11 @@
+version: '3'
+services:
+  timecat_docs:
+    image: registry.cn-hangzhou.aliyuncs.com/oct16/timecat_docs:${IMAGE_TAG}
+    build: .
+    restart: always
+    container_name: timecat_docs
+    environment:
+      - NODE_ENV=production
+    ports:
+      - '5500:5500'
