@@ -1,7 +1,7 @@
 const apps = [
     {
         name: 'timecat-docs',
-        script: 'yarn serve-static',
+        script: 'yarn serve',
         instances: 1
     }
 ]

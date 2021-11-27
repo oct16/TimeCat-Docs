@@ -3,14 +3,13 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "serve-static": "serve -s -p 5500 build",
         "docusaurus": "docusaurus",
         "dev": "npm run start",
         "start": "docusaurus start",
         "build": "docusaurus build",
         "swizzle": "docusaurus swizzle",
         "deploy": "docusaurus deploy",
-        "serve": "docusaurus serve",
+        "serve": "docusaurus serve -p 5500",
         "clear": "docusaurus clear"
     },
     "dependencies": {

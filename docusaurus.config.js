@@ -1,7 +1,7 @@
 module.exports = {
     title: 'TimeCat',
     tagline: 'A Magical Web Recorder & Player',
-    url: 'https://oct16.github.io',
+    url: 'https://docs.timecatjs.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',

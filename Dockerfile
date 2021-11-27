@@ -6,7 +6,6 @@ WORKDIR /app
 
 RUN yarn config set registry https://registry.npmmirror.com
 RUN yarn global add pm2@5.1.1
-RUN yarn global add serve
 RUN yarn install
 RUN yarn build
 
