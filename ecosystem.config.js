@@ -1,7 +1,7 @@
 const apps = [
     {
         name: 'timecat-docs',
-        script: 'yarn serve',
+        script: 'http-server build -g --log-ip -b -p 5500',
         instances: 1
     }
 ]
