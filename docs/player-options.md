@@ -27,15 +27,38 @@ interface PlayerOptions {
 
 const player = new Player(PlayerOptions)
 
-type EventTypes = 'play' | 'stop' | 'pause' | 'speed' | 'resize'
+// destroy player
+player.destroy({ removeDOM: boolean})
+// set removeDOM will remove player ui
 
+```
+
+## Control
+```ts
+const player = new Player(PlayerOptions)
+
+// events...
+type EventTypes = 'play' | 'stop' | 'pause' | 'speed' | 'resize'
 player.on(eventType: EventTypes, (...args) => {
     // receive event here
 })
 
-// destroy player
-player.destroy({ removeDOM: boolean})
-// set removeDOM will remove player ui
+const ctrl = player.getCtrl()
+
+// stop
+ctrl.pause()
+
+// play, speed = 1
+ctrl.play()
+
+// fast forward
+ctrl.currentTime = milliseconds
+
+// getters
+ctrl.currentTime
+ctrl.duration
+ctrl.frames
+ctrl.paused
 
 ```
 
