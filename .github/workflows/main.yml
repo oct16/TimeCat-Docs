@@ -41,7 +41,7 @@ jobs:
 
             docker stop timecat_docs
             docker rm timecat_docs
-            docker run -p 5500:5500 --network host -e NODE_ENV=production -d --name timecat_docs registry.cn-hangzhou.aliyuncs.com/oct16/timecat_docs:${{ github.sha }}
+            docker run -p 5500:5500 --network host --restart=always -e NODE_ENV=production -d --name timecat_docs registry.cn-hangzhou.aliyuncs.com/oct16/timecat_docs:${{ github.sha }}
 
             docker rmi $(docker images | grep timecat_docs | grep 'weeks ago' | awk '{print $3}') >/dev/null 2>&1 || true
             docker rmi $(docker images | grep timecat_docs | grep 'months ago' | awk '{print $3}') >/dev/null 2>&1 || true
