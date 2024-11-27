@@ -44,7 +44,7 @@
     left: 370px;
     position: relative;
     max-width: 340px;
-    padding: 5px 0;
+    padding: 8px 0;
     border: 6px solid white;
     border-radius: 20px;
     background-color: #6d8cd1;
@@ -57,8 +57,10 @@
     width: 50px;
     height: 50px;
     vertical-align: middle;
-    margin-right: 10px;
-    background: url("https://camo.githubusercontent.com/01fa1f6ffedd2023d08e959a3e37d2d6e920516f7194762c47e0c18b828f7de0/68747470733a2f2f7777772e676f6f676c652e636f6d2f6368726f6d652f7374617469632f696d616765732f6368726f6d652d6c6f676f2e737667");
+    margin-right: 15px;
+    background: url("https://www.google.com/chrome/static/images/chrome-logo-m100.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
 } 
 
 .title::before{

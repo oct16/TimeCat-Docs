@@ -1,7 +1,7 @@
 const apps = [
     {
         name: 'timecat-docs',
-        script: 'http-server build -g --log-ip -b -p 5500',
+        script: 'http-server build -g --log-ip -b -p 8700',
         instances: 1
     }
 ]

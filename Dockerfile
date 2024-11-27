@@ -1,15 +1,14 @@
-FROM node:16.9.1-alpine3.12
-LABEL maintainer="oct16"
-
+FROM node:20-slim AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 COPY . /app
 WORKDIR /app
 
-RUN yarn config set registry https://registry.npmmirror.com
-RUN yarn global add http-server
-RUN yarn global add pm2@5.1.1
-RUN yarn install
-RUN yarn build
+FROM base AS prod-deps
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
 
-EXPOSE 5500
-
-CMD pm2-runtime ecosystem.config.js --only timecat-docs
+FROM base
+COPY --from=prod-deps /app/node_modules /app/node_modules
+EXPOSE 8700
+CMD [ "pnpm", "serve" ]

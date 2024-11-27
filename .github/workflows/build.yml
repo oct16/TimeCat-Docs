@@ -1,0 +1,82 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]    
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Login to ACR
+        uses: aliyun/acr-login@v1
+        with:
+          login-server: registry.cn-hangzhou.aliyuncs.com
+          username: "${{ secrets.ACR_USERNAME }}"
+          password: "${{ secrets.ACR_PASSWORD }}"
+      - name: Build And Push Docker Image
+        env:
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          DOCKER_BUILDKIT=1 docker compose build timecat-docs
+          docker compose push timecat-docs
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Copy docker-compose file via scp
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: 22
+          source: "./docker-compose.yml"
+          target: "~/.deploy/timecat-docs"
+      - name: Execute SSH On Remote Server
+        uses: appleboy/ssh-action@v0.1.10
+        env:
+          IMAGE_TAG: ${{ github.sha }}
+        with:
+          envs: IMAGE_TAG
+          username: ${{ secrets.USER }}
+          host: ${{ secrets.HOST }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: 22
+          script_stop: true
+          script: |
+            cd /
+
+            docker login --username=${{ secrets.ACR_USERNAME }} --password=${{ secrets.ACR_PASSWORD }} registry.cn-hangzhou.aliyuncs.com
+
+            docker compose -f ~/.deploy/timecat-docs/docker-compose.yml pull timecat-docs
+
+            docker rm -f timecat-docs
+
+            docker compose -f ~/.deploy/timecat-docs/docker-compose.yml up timecat-docs -d
+
+            docker rmi $(docker images | grep timecat-docs | grep 'weeks ago' | awk '{print $3}') >/dev/null 2>&1 || true
+            docker rmi $(docker images | grep timecat-docs | grep 'months ago' | awk '{print $3}') >/dev/null 2>&1 || true
+            
+            docker images | grep "weeks ago" | awk "{print \$1\":\"\$2}" | xargs -r docker rmi >/dev/null 2>&1 || true
+
+            echo "run deploy script done"
