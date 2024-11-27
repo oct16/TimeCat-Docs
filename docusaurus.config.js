@@ -128,5 +128,8 @@ module.exports = {
                 }
             }
         ]
+    ],
+    plugins: [
+        'my-loaders'
     ]
 }
